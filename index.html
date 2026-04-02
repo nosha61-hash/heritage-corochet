@@ -2624,53 +2624,7 @@
                         </div>
                     </div>
 
-                    <form id="contactForm" onsubmit="submitForm(event)">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">اسمك الكريم</label>
-                                <input type="text" id="name" placeholder="مثال: سارة أحمد" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">رقم تليفونك</label>
-                                <input type="tel" id="phone" placeholder="01xxxxxxxxx" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="city">محافظتك</label>
-                            <select id="city">
-                                <option value="">اختاري المحافظة</option>
-                                <option>القاهرة</option>
-                                <option>الجيزة</option>
-                                <option>الإسكندرية</option>
-                                <option>الدقهلية</option>
-                                <option>الغربية</option>
-                                <option>المنوفية</option>
-                                <option>القليوبية</option>
-                                <option>أسيوط</option>
-                                <option>سوهاج</option>
-                                <option>أخرى</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">طلبك أو سؤالك</label>
-                            <textarea id="message" placeholder="احكيلي عن طلبك بالتفصيل.. أي معلومة هتساعدني أساعدك أحسن 😊" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">
-                            <i class="fas fa-paper-plane"></i>
-                            ابعتي رسالتك للحاجة نوشة
-                        </button>
-                    </form>
-
-                    <div class="success-message" id="successMsg">
-                        <p>✅ فتحنالك شات الماسنجر! الصقي رسالتك وابعتيها للحاجة نوشة 💬</p>
-                        <p style="margin-top:10px; font-size:0.85rem; color:#555;">
-                            بياناتك اتنسخت تلقائياً — كل اللي عليكي تعمليه هو <strong>Ctrl+V</strong> (أو طول الضغط ولصق) في الماسنجر 🙌
-                        </p>
-                        <a href="https://m.me/636795773111380" target="_blank" rel="noopener"
-                           style="display:inline-block; margin-top:15px; background: linear-gradient(135deg,#0084ff,#006edd); color:white; padding:10px 25px; border-radius:25px; text-decoration:none; font-weight:700; font-size:0.95rem;">
-                            <i class="fab fa-facebook-messenger" style="margin-left:6px;"></i>
-                            افتح الماسنجر
-                        </a>
+                    
                     </div>
                 </div>
             </div>
@@ -2689,7 +2643,49 @@
                         فن الكروشيه الأصيل على يد الحاجة نوشة. أكثر من 40 عاماً من الإبداع والإتقان، في كل غرزة حكاية وفي كل قطعة روح.
                     </p>
                     <div style="margin-top: 20px; color: rgba(255,255,255,0.5); font-size: 0.85rem;">
-                        <i class="fas fa-map-marker-alt" style="color: var(--gold-light); margin-left: 5px;"></i>
+                        <i class="fas fa-map-marker-a<form id="contactForm" name="heritage-crochet-order" method="POST" data-netlify="true" onsubmit="submitForm(event)">
+    <div class="form-row">
+        <div class="form-group">
+            <label for="name">الاسم الكريم</label>
+            <input type="text" id="name" name="name" placeholder="مثال: سارة أحمد" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">رقم تليفونك</label>
+            <input type="tel" id="phone" name="phone" placeholder="01xxxxxxxxx" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="city">المحافظة</label>
+        <select id="city" name="city">
+            <option value="">اختاري المحافظة</option>
+            <option>القاهرة</option>
+            <option>الجيزة</option>
+            <option>الإسكندرية</option>
+            <option>الدقهلية</option>
+            <option>الغربية</option>
+            <option>المنوفية</option>
+            <option>القليوبية</option>
+            <option>أسيوط</option>
+            <option>سوهاج</option>
+            <option>أخرى</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="message">تفاصيل قطعة الكروشيه أو سؤالك</label>
+        <textarea id="message" name="message" placeholder="احكيلي عن المقاسات، الألوان، أو أي تفاصيل خاصة.. الحاجة نوشة هتسمعك بكل حب" required></textarea>
+    </div>
+    <button type="submit" class="submit-btn">
+        <i class="fas fa-magic"></i>
+        إرسال الطلب للحاجة نوشة
+    </button>
+</form>
+
+<div class="success-message" id="successMsg" style="text-align: center; display: none;">
+    <div style="font-size: 3rem; margin-bottom: 1rem;">🧶</div>
+    <h3 style="color: var(--gold-light);">تم استلام طلبك بنجاح!</h3>
+    <p>شكراً لثقتك في "تراث الكروشيه". الحاجة نوشة استلمت طلبك وهتراجع التفاصيل وترد عليكي عبر **الواتساب** في أقرب وقت ممكن عشان تبدأ تنسجلك قطعة بكل حب.</p>
+</div>
+lt" style="color: var(--gold-light); margin-left: 5px;"></i>
                         القاهرة، مصر
                     </div>
                 </div>
@@ -3035,45 +3031,33 @@
     // FORM SUBMIT
     // ========================================
     function submitForm(e) {
-        e.preventDefault();
-        const btn = e.target.querySelector('.submit-btn');
+    e.preventDefault();
+    const btn = e.target.querySelector('.submit-btn');
+    const formData = new FormData(e.target);
 
-        // Collect form data
-        const name    = (document.getElementById('name').value    || '').trim();
-        const phone   = (document.getElementById('phone').value   || '').trim();
-        const city    = (document.getElementById('city').value    || '').trim();
-        const message = (document.getElementById('message').value || '').trim();
+    // تعطيل الزر وإظهار حالة التحميل
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
+    btn.disabled = true;
 
-        // Get selected service label
-        const selectedService = document.querySelector('.service-option.selected h5');
-        const service = selectedService ? selectedService.textContent.trim() : '';
+    // إرسال البيانات إلى Netlify
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+    })
+    .then(() => {
+        // إخفاء الفورم وإظهار رسالة النجاح
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('successMsg').classList.add('show');
+        console.log("تم الإرسال بنجاح إلى Netlify");
+    })
+    .catch((error) => {
+        alert("عذراً، حدث خطأ أثناء الإرسال: " + error);
+        btn.disabled = false;
+        btn.innerHTML = 'إرسال الاستشارة';
+    });
+}
 
-        // Build a pre-filled Messenger message
-        const text = [
-            'السلام عليكم يا حاجة نوشة! 👋',
-            '📌 الخدمة: ' + service,
-            '👤 الاسم: ' + name,
-            '📞 التليفون: ' + phone,
-            (city ? '📍 المحافظة: ' + city : ''),
-            '💬 التفاصيل: ' + message
-        ].filter(Boolean).join('\n');
-
-        // Animate button
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري فتح الماسنجر...';
-        btn.disabled = true;
-
-        // Open Messenger with prefilled ref (Messenger doesn't support pre-filled text via m.me directly,
-        // so we open Messenger then show success + copy hint)
-        setTimeout(() => {
-            window.open('https://m.me/636795773111380', '_blank', 'noopener');
-            document.getElementById('contactForm').style.display = 'none';
-            document.getElementById('successMsg').classList.add('show');
-            // Store message in clipboard so user can paste it
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(text).catch(() => {});
-            }
-        }, 800);
-    }
 
     // ========================================
     // UPLOAD
